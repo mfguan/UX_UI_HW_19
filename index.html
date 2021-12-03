@@ -18,10 +18,10 @@
 
             <nav class="inline-block">
                 <ul>
-                    <li class="inline-block">Home</li>
-                    <li class="inline-block">Work</li>
-                    <li class="inline-block">Resume</li>
-                    <li class="inline-block">About</li>
+                    <li class="inline-block-nav home">Home</li>
+                    <li class="inline-block-nav">Work</li>
+                    <li class="inline-block-nav">Resume</li>
+                    <li class="inline-block-nav">About</li>
                 </ul>
             </nav>
          
@@ -131,6 +131,47 @@
         </footer>
 
     </body>
+
+
+    <!--jQuery code -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+
+    $(document).ready(function(){
+    $("li").hover(function(){
+        $(this).css("color", "#F58634");
+        $(this).css("text-decoration", "underline");
+        }, function(){
+        $(this).css("color", "#000000");
+        $(this).css("text-decoration", "none");
+    });
+    });
+
+    $(document).ready(function(){
+    $(".home").hover(function(){
+        $(this).css("color", "#F58634");
+        $(this).css("text-decoration", "underline");
+        }, function(){
+            $(this).css("color", "#F58634");
+        $(this).css("text-decoration", "underline");
+    });
+    });
+
+
+    $(document).ready(function(){
+    $("button").hover(function(){
+        $(this).css("background-color", "#F58634");
+        $(this).css("text-decoration","underline");
+        }, function(){
+        $(this).css("background-color", "#373737");
+        $(this).css("text-decoration", "none");
+    });
+    });
+
+
+
+    </script>
+
 
     <script src="js/index.js"></script>
 </html>
